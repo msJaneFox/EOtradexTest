@@ -1,0 +1,6 @@
+pytest==4.4.0
+selenium==3.141.0
+allure-pytest==2.8.4
+wget==3.2
+tox==3.14.0
+allure-python-commons==2.8.4
