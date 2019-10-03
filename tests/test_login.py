@@ -85,7 +85,7 @@ def test_login_non_exist_user(driver):
         login_page.get_login_page()
 
     user = [generate_text() + '@mail.ru', generate_text()]
-    with allure.step('Ввод случайных валидных данных юзера'):
+    with allure.step('Ввод случайных валидных данных несуществующего юзера'):
         login_page.enter_login_data(user)
 
     with allure.step('Проверка появления сообщения о неправильном пароле'):
@@ -136,7 +136,7 @@ def test_forgot_password_with_wrong_email(driver):
         login_page.click_forgot_password()
 
     email = generate_text()
-    with allure.step('Ввод случайного валидного email'):
+    with allure.step('Ввод невалидного email'):
         login_page.enter_email_in_forgot_field(email)
 
     with allure.step('Нажатие на кнопку отправки пароля'):

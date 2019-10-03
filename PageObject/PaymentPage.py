@@ -83,7 +83,7 @@ class PaymentPage(WebBase):
 
     def enter_amount(self, amount):
         """
-        Выбирает валюту
+        Вводит сумму
         :return:
         """
         amount_field = self.find_element_by_xpath(self.AMOUNT_FIELD)
@@ -100,7 +100,7 @@ class PaymentPage(WebBase):
 
     def get_amount_status(self, status):
         """
-        Возвращает минимульную сумму статуса
+        Возвращает минимальную сумму статуса
         :return:
         """
         amount_status = self.find_element_by_xpath(status+self.AMOUNT_STATUS).text

@@ -51,7 +51,7 @@ class LoginPage(WebBase):
 
     def check_language(self, lang):
         """
-        Возвращает язык интерфейса
+        Проверяет язык интерфейса
         :return:
         """
         url = self.driver.current_url
@@ -83,7 +83,7 @@ class LoginPage(WebBase):
 
     def close_message(self):
         """
-        Закртывает сообщение о неверном пароле
+        Закрывает сообщение о неверном пароле
         :return:
         """
         close = self.find_element_by_xpath(self.CLOSE_MESSAGE)
